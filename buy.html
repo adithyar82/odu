@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+function ajaxeample(){
+alert("Inside onclick listener");
+var searchURL = "buyer.php?"+$(".buyerForm input").serialize();
+alert(searchURL);
+$.ajax({
+    url : searchURL,
+    type: "GET",
+        success: function(data, textStatus, jqXHR)
+    {      
+        alert("successfull search");
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+        alert("Failure : " + errorThrown);
+    }
+});
+
+
+}
+</script>
+</head>
+<body>
+
+<form class="buyerForm">
+SName: <input type="text" name="SearchbyName" /><br>
+SCost: <input type="text" name="SearchbyCost" /></br>
+SMileage: <input type="number" name="Smileage" /><br>
+
+
+</form>
+<input  type="button" onclick="ajaxeample()" name="sell" value="search"/>
+<br>
+<div id="txtHint"><b>Person info will be listed here...</b></div>
+
+</body>
+</html>
