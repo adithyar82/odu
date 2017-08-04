@@ -1,0 +1,7 @@
+create table car(
+name text(20),
+type text(20),
+cost int(20),
+pid int(10),
+Foreign Key pid references properties pid,
+);
