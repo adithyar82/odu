@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id ="num" type="number" name="num" placeholder="Enter your number">
+<input onclick="actionsub()" type ="Submit">
+
+
+<h2>JavaScript</h2>
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+var j;
+for(j=0;j<11;j++)
+{
+  num*j=temp;
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>

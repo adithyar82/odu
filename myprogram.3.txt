@@ -1,0 +1,37 @@
+// Example program
+#include <iostream>
+#include <string>
+
+int main()
+{ 
+int x,y,i,j,count,um,ch,m=0;
+char z;
+std::string str1("Flames");
+std::string str2();
+  std::string name;
+  std::cout << "What is first person  name? ";
+  getline (std::cin, name);
+  std::string name2;
+  std::cout<< "What is second person name? ";
+  getline (std::cin,name2);
+  std::cout<<"Both the names are "<<name<<" and "<<name2<<"\n";
+  x=name.length();
+   y=name2.length();
+    std::cout<<"String length is  "<<x<<" and "<<y<<"\n";
+    for(i=0;i<x;i++)
+    {
+        ch=name[i];
+        for(j=0;j<y;j++)
+        {
+            if(ch==name2[j])
+            {
+                count++;
+                name2[j]='*';
+                break;
+
+            }
+        }    
+    }
+    
+    
+    

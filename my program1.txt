@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string>
+
+int main()
+
+#include <iostream>
+#include <string>
+
+int main()
+{ 
+int x,y,i,j,count,um,z=0,k=0;
+char p[]="FLAMES";
+  std::string name;
+  std::cout << "What is first person  name? ";
+  getline (std::cin, name);
+  std::string name2;
+  std::cout<< "What is second person name? ";
+  getline (std::cin,name2);
+  std::cout<<"Both the names are "<<name<<" and "<<name2<<"\n";
+  x=name.length();
+   y=name2.length();
+    std::cout<<"String length is  "<<x<<" and "<<y<<"\n";
+    for(i=0;i<x;i++)
+    {
+        for(j=0;j<y;j++)
+        {
+            if(name[i]==name2[j])
+            {
+                count++;
+                name2[j]='*';
+                break;
+            
+
+            }
+        }    
+    }
+    std::cout<<"Number of common letters are: "<<count<<"\n";
+    um = (x+y)-count;
+      std::cout<<"Number of unmatched letters are: "<<um<<"\n";
+    if(um<6)
+    {
+        for(i=z;i<um;i++)
+        {
+            p[i]=0;
+            i=z;
+        }
+    }    
+}     
+     

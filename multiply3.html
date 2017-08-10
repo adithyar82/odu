@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+    function multFunction() {
+    document.getElementById("multiply").innerHTML = " ";
+        var input = document.getElementById("Enter").value;
+
+       var i,j;
+for(i=1;i<=input;i++)
+{
+       
+  document.getElementById("multiply").innerHTML +="<br>";
+       
+ 	for (j = 1; j< 11;j++)   
+	{
+            var c = i*j;                    
+            document.getElementById("multiply").innerHTML +=i + "x" + j + "=" + c +"<br>";
+             
+	}
+    
+}
+ i=i+1;
+    }
+
+</script>
+<body>
+<p>Multiplication table</p>
+<input placeholder="Enter the number" type="text" name="number" id="Enter"/>
+
+<br />
+<button onclick= "multFunction()">Process</button>
+<br />
+
+<p id="multiply"></p>
+
+
+</body>
+</html>
+       
+        
+        

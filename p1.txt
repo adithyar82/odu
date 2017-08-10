@@ -1,0 +1,26 @@
+num=float(input("Enter a number: "))
+          if num > 0:
+          print("Positve number")
+        elif num==0:
+            print("Zero")
+            else:
+            print("Negative Number")
+            
+       num = float(input("Enter a number: "))
+          if num > 0:
+          print("Positve number")
+        elif num == 0:
+            print("Zero")
+            else:
+            print("Negative Number")
+            
+       // Example program
+#include <iostream>
+#include <string>
+
+int main()
+{
+  std::string name;
+  std::cout << "What is your name? ";
+  getline (std::cin, name);
+  std::cout << "Hello, " << name << "!\n"; 

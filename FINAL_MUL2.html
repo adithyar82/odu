@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><style>
+.mul{
+position:fixed;
+top: 150px;
+left:600px;
+}
+</style>
+    <meta charset="utf-8" />
+    <meta name="description" content="JavaScript accept user input demo" />
+    <meta name="keywords" content="JavaScript, UserInput" />
+    <title>JavaScript accept user input demo</title>
+    <script type="text/javascript">
+     function displayOutput()  
+     {
+            var input = document.getElementById("userInput").value;
+            var text=""; 
+	          var i,j;
+	   for(i=1;i<=input;i++)
+	   {   
+	   document.getElementById("result").innerHTML +="<br>";   
+	      for(j=1;j<11;j++)
+	       {  
+           var c=i*j;
+            text += "<br>"+i+"x" + j +"="+ c;
+             document.getElementById("result").innerHTML = text;
+    	   
+         }
+
+          
+      } 
+      i=i+1;
+     } 
+    </script>
+</head>
+<body>
+<div class="mul">
+    <h1 id="result">JAVA SCRIPT</h1>
+    <input type="text" id="userInput" placeholder="Enter input Number" />
+    <input type="submit" value="PLACE" onclick="displayOutput()" />
+</div>
+</body>
+</html>

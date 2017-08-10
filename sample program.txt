@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+
+int main()
+{ 
+int x,y,i,j,count,um,ch;
+  std::string name;
+  std::cout << "What is first person  name? ";
+  getline (std::cin, name);
+  std::string name2;
+  std::cout<< "What is second person name? ";
+  getline (std::cin,name2);
+  std::cout<<"Both the names are "<<name<<" and "<<name2<<"\n";
+  x=name.length();
+   y=name2.length();
+    std::cout<<"String length is  "<<x<<" and "<<y<<"\n";
+    for(i=0;i<x;i++)
+    {
+        ch=name[i];
+        for(j=0;j<y;j++)
+        {
+            if(ch==name2[j])
+            {
+                count++;
+                name2[j]='*';
+                break;
+
+            }
+        }    
+    }
+    std::cout<<"Number of common letters are: "<<count<<"\n";
+    um = (x+y)-(count*2);
+     std::cout<<"Number of unmatched letters are: "<<um<<"\n";
+    if(um==0)
+    std::cout<<"There are no unmatched letters"<<"\n";
+    
+    
+}
+https://github.com/adithyar82/final-program/blob/master/Sample%20program.cpp
