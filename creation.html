@@ -1,0 +1,28 @@
+<html>
+<head>
+ 
+ 
+ 
+</head>
+ 
+<body  onclick="CreateTable()">
+<h1>My First Web Page</h1>
+<script type="text/javascript">
+function CreateTable()
+{
+    var tablecontents = "";
+    tablecontents = "<table>";
+    for (var i = 0; i < 5; i ++)
+   {
+      tablecontents += "<tr>";
+      tablecontents += "<td>" + i + "</td>";
+      tablecontents += "<td>" + i * 100 + "</td>";
+      tablecontents += "<td>" + i * 1000 + "</td>";
+      tablecontents += "</tr>";
+   }
+   tablecontents += "</table>";
+   document.write(tablecontents);
+}
+</script>
+</body>
+</html>
