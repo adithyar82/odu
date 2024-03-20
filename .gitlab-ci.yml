@@ -1,0 +1,30 @@
+image: alpine:3.7
+
+
+before_script: 
+  - 'which ssh-agent || ( apk update && apk add openssh-client && apk add bash && apk add rsync)'
+  - mkdir ~/.ssh && touch known_hosts
+  - echo "$PUBLIC_HOST_KEY" >> ~/.ssh/known_hosts
+  - eval $(ssh-agent -s)
+  - bash -c "ssh-add <(echo '$PRIVATE_SSH_KEY')"
+  
+stages:
+  - test
+  - deploy
+
+deploy-test:
+  only:
+    refs:
+      - dev
+  script:
+    - rsync -auvz -e "ssh" ./ --exclude-from 'exclude_list.txt' --delete --no-perms handsondeploy@quiz-mgmt.cs.odu.edu:/var/www/qav2/anusha_matcha/chkd/dev
+    - ssh-agent -k
+
+deploy-job:
+  only:
+    refs:
+      - master
+  stage: deploy
+  script:
+    - rsync -auvz -e "ssh" ./ --exclude-from 'exclude_list.txt' --delete --no-perms handsondeploy@quiz-mgmt.cs.odu.edu:/var/www/qav2/anusha_matcha/chkd/prod
+    - ssh-agent -k
